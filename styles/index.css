@@ -1,0 +1,226 @@
+/***** Home Page *****/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: white;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Thin Decorative Line */
+.top-decoration {
+    width: 90vw;
+    height: 30px;
+    background-color: #D7C5FD;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 5%;
+}
+
+/**** To-Do List ****/
+
+.outer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    max-width: 650px;
+}
+
+/* To-Do List - Title Section */
+h1{
+    color: #52489C;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h2{
+    color: #52489C;
+    margin: 30px 0;
+}
+
+img {
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* To-Do List - Input */
+.input-section {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #52489C;
+}
+
+button {
+    padding: 12px 20px;
+    background: #52489C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: rgba(85, 104, 211, 0.74);
+}
+
+/* To-Do List - Output Section */
+.todo-list {
+    list-style: none;
+}
+
+.empty-message {
+    text-align: center;
+    color: #999;
+    padding: 40px 20px;
+    font-size: 18px;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: all 0.3s;
+}
+
+.todo-item:hover {
+    background: #f0f0f0;
+}
+
+.todo-item.completed {
+    opacity: 0.6;
+}
+
+.todo-item.completed .todo-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #52489C;
+}
+
+.todo-text {
+    flex: 1;
+    color: #333;
+    word-break: break-word;
+}
+
+.delete-btn {
+    padding: 6px 12px;
+    background: #ff6b6b;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background: #ee5a5a;
+}
+
+/* To-Do List - Edit Modal */
+.edit-btn {
+    padding: 6px 12px;
+    background: #4ecdc4;
+    font-size: 14px;
+}
+
+.edit-btn:hover {
+    background: #3eb3ab;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%;
+}
+
+#editInput {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+#editInput:focus {
+    outline: none;
+    border-color: #52489C;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.save-btn {
+    flex: 1;
+    background: #52489C;
+}
+
+.save-btn:hover {
+    background: rgba(85, 104, 211, 0.74);
+}
+
+.cancel-btn {
+    flex: 1;
+    background: #999;
+}
+
+.cancel-btn:hover {
+    background: #888;
+}

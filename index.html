@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <div class="top-decoration"></div>
+    <div class="outer-container">
+        <div class="container">
+            <!-- Insert Image Here -->
+            <h1>[User] To-Do List</h1>
+
+            <div class="input-section">
+                <!-- Finish the input tag and add missing element -->
+                <input
+                    type="text"
+                    id=
+                    placeholder="Add to list..."
+                    autocomplete="off"
+                >
+                <!-- What's missing here? -->
+            </div>
+
+            <h2>Things To Do</h2>
+            <ul class="todo-list" id="todoList"></ul>
+            <div class="empty-message" id="emptyMessage">Add a task to get started!</div>
+
+            <div id="editModal" class="modal hidden">
+                <div class="modal-content">
+                    <input type="text" id="editInput" placeholder="Edit task...">
+                    <div class="modal-buttons">
+                        <!-- Input the correct functions in each button -->
+                        <button class="save-btn" onclick="">Save</button>
+                        <button class="cancel-btn" onclick="">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="javascript/index.js"></script>
+</body>
+</html>
